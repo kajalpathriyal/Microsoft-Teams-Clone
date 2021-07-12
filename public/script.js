@@ -122,5 +122,27 @@ const setPlayVideo=()=>{
     document.querySelector('.main_video_button').innerHTML=html;
 }
 
+let check=0
+const toggleChat=()=>{
+  if(!check){
+    document.getElementById("chats").style.display="flex";
+    check=1;
+  }
+  else{
+    document.getElementById("chats").style.display="none";
+    check=0;
+  }
+}
+
+const sendMessage=(event)=>{
+    event.preventDefault();
+    if(message){
+        socket.emit('sendMessage', message, () =>setMessage(''));
+    }
+}
+
+
+ 
+   
 
 

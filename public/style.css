@@ -13,7 +13,7 @@ body{
 }
 
 video{
-    height: 200px;
+    height: 300px;
     width: 300px;
     object-fit: cover;
     padding: 5px;
@@ -24,13 +24,15 @@ height: 100vh;
     
 }
 .main_left{
-flex: 0.8;
+    
+flex: 1;
 display: flex;
 flex-direction: column;
 
 }
 .main_right{
 flex: 0.2;
+display: none;
 
 
 }
@@ -43,12 +45,14 @@ flex-grow: 1;
 }
 .controls{
     display: flex;
-    background-color: #262424;
+    
+    background-color: #4d4848;
 padding: 5px;
 justify-content:space-between;
 }
 .main_controls_block{
     display: flex;
+
     width: fit-content;
     font-size: 18px;
 
@@ -61,14 +65,14 @@ justify-content:space-between;
     color:#ffffff;
     justify-content: center;
     align-items: center;
-    padding: 2px;
+    padding: 8px 5px;
     margin: 2px;
-    margin-top: 2px;
-    margin-bottom :2px; ;
+    
     cursor: pointer;
-    height: 70px;
-    width: 100px;
+   
+    min-width: 80px;
 }
+
 .leave_meeting{
     
     display: flex;
@@ -84,10 +88,10 @@ justify-content:space-between;
     
 }
 .main_right{
-    flex: 0.2;
-    display: flex;
+   display: none;
+  
     flex-direction: column;
-    background-color: #262424;
+    background-color: #1f1e1e;
     border-left: 1px solid #ffffff;
 }
 .main_header{
@@ -106,11 +110,11 @@ overflow-y: scroll;
 
   flex-grow: 1;
   background-color: transparent;
-  border: none;
+ 
   color: #ffffff;
   
 }
-.messages{
+.message{
     color: white;
     list-style: none;
 }
@@ -120,3 +124,9 @@ overflow-y: scroll;
 .stop{
     color: red;
 }
+.sendbutton{
+    background-color: #8a8aea;
+}
+
+
+
