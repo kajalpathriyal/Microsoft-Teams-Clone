@@ -32,13 +32,13 @@ $('html').keydown((e) => {
     if (e.which == 13 && text.val().length !== 0) {
       
         socket.emit('message', text.val());
-        text.val(' ')
+        text.val('')
     }
 })
 
 socket.on('createMessage', message =>{
     console.log("create message", message)
-   $('.messages').append(`<li class="message"><b>user</b><br/>${message}</li>`)
+   $('ul').append(`<li class="message"><b>user</b><br/>${message}</li>`)
 scrollToBottom()
 })
 })
@@ -84,13 +84,13 @@ const muteUnmute=()=>{
 }
 const setMuteButton=()=>{
     const html=`<i class="fas fa-microphone"></i>
-    <span>Mute</span>
+  
     `
     document.querySelector('.main_mute_button').innerHTML=html;
 }
 const setUnmuteButton=()=>{
     const html=`<i class="unmute fas fa-microphone-slash"></i>
-    <span>Unmute</span>
+  
     `
     document.querySelector('.main_mute_button').innerHTML=html;
 }
@@ -111,13 +111,13 @@ const playStop=()=>{
 
 const setStopVideo=()=>{
     const html=`<i class="fas fa-video"></>
-    <span>Stop Video</span>
+   
     `
     document.querySelector('.main_video_button').innerHTML=html;
 }
 const setPlayVideo=()=>{
     const html=`<i class="stop fas fa-video-slash"></>
-    <span>Play Video</span>
+    
     `
     document.querySelector('.main_video_button').innerHTML=html;
 }
@@ -132,13 +132,6 @@ const toggleChat=()=>{
     document.getElementById("chats").style.display="none";
     check=0;
   }
-}
-
-const sendMessage=(event)=>{
-    event.preventDefault();
-    if(message){
-        socket.emit('sendMessage', message, () =>setMessage(''));
-    }
 }
 
 
