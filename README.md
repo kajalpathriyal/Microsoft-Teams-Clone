@@ -77,7 +77,7 @@ Demo Video : https://vimeo.com/574551770
 To run the project on your local machine, follow the instructions:
 1. Clone the repository
 bash
-git clone 
+git clone https://github.com/kajalpathriyal/Microsoft-Teams-Clone.git
 
 
 2. Change your current directory to repository folder and then install all the dependencies
