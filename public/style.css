@@ -70,6 +70,7 @@ justify-content:center;
     margin: 2px;
     cursor: pointer;
     min-width: 80px;
+    border-radius: 5px;
 }
 
 .leave_meeting{
@@ -118,6 +119,7 @@ overflow-y: scroll;
 }
 .unmute {
     color: red;
+  
 }
 .stop{
     color: red;
